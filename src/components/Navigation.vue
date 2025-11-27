@@ -69,7 +69,7 @@ const handleScroll = () => {
   
   // Update active section based on scroll position
   const sections = ['home', 'about', 'skills', 'projects', 'contact']
-  const scrollPosition = window.scrollY + 100
+
   
   for (const section of sections) {
     const element = document.getElementById(section)
