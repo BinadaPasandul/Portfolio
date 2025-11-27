@@ -71,7 +71,7 @@ interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: 'E-Commerce Platform',
+    title: 'Snazzy-The Smart Shoe Store',
     description:
       'A full-stack e-commerce application with user authentication, product management, and payment integration.',
     technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Express'],

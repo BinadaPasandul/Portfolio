@@ -8,11 +8,13 @@
         </h1>
         <p class="title">Full Stack Developer</p>
         <p class="description">
-          I am a Full stack developer with strong backend developing skills, combining academic 
-          knowledge and practical experience. I design scalable digital solutions and thrive in 
-          dynamic environments. Passionate about innovation, having creative unique ideas, I 
-          continuously learn new technologies and take on challenges to deliver impactful, high
-          quality applications that meet user and business needs.
+          Hi, I'm Binada Pasandul — a 
+          full-stack developer with a strong focus 
+          on backend engineering and building scalable, high-performance systems. 
+          With experience completing 6+ full-stack projects and working with international clients, I specialize in 
+          crafting modern web applications, cloud-powered solutions, and clean user experiences using modern technologies
+           .
+
         </p>
         <div class="hero-buttons">
           <a href="#projects" class="btn btn-primary">View My Work</a>

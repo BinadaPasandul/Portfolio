@@ -8,25 +8,29 @@
       <div class="about-content">
         <div class="about-text">
           <p>
-            Hello! I'm a passionate developer with a strong interest in building
-            innovative web applications. I'm currently seeking internship
-            opportunities to expand my skills and work on meaningful projects.
+            I'm Binada Pasandul, an IT undergraduate at SLIIT and a dedicated full-stack developer with strong expertise in backend development, cloud computing, and scalable 
+            system architecture. Over the past few years, I’ve completed 6+ full-stack projects across MERN, Java JSP/Servlet, PHP-MySQL, and Android, gaining hands-on experience building secure APIs, 
+            real-time applications, and production-ready platforms. 
+            I’ve worked with international clients, including delivering a real-time trading project integrating React, C#, SignalR, and WebSockets using Agile and Jira.
           </p>
           <p>
-            My journey in software development has been driven by curiosity and
-            a desire to solve real-world problems. I enjoy working with modern
-            technologies and am always eager to learn new frameworks and tools.
+            I’m skilled in technologies such as Java, JavaScript, Python, C#, React.js, Node.js, SQL, MongoDB, AWS, Azure, and 
+            .NET — and I enjoy turning complex requirements into clean, efficient, and well-designed systems. Beyond development, I value continuous
+             learning, problem-solving, and writing maintainable code that scales. My goal is to grow as a backend and cloud engineer while creating high-quality digital solutions
+             that make a real impact.
           </p>
           <p>Here are a few technologies I've been working with recently:</p>
           <ul class="tech-list">
-            <li>JavaScript (ES6+)</li>
+            <li>MERN</li>
             <li>TypeScript</li>
-            <li>Vue.js</li>
-            <li>React</li>
-            <li>Node.js</li>
             <li>Python</li>
+            <li>Vue.js</li>
+            <li>.NET</li>
+            <li>Angular</li>
+            <li>C#</li>
             <li>Git & GitHub</li>
             <li>RESTful APIs</li>
+            <li>Jira</li>
           </ul>
         </div>
         <div class="about-image">
