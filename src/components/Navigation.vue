@@ -33,12 +33,13 @@
         </a></li>
       </ul>
       <div class="nav-actions">
-        <a href="/resume.pdf" class="resume-btn" target="_blank">
+        <!-- Updated Resume Button -->
+        <button class="resume-btn" @click="downloadResume">
           <span>Resume</span>
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M14 2H6C5.46957 2 4.96086 2.21071 4.58579 2.58579C4.21071 2.96086 4 3.46957 4 4V20C4 20.5304 4.21071 21.0391 4.58579 21.4142C4.96086 21.7893 5.46957 22 6 22H18C18.5304 22 19.0391 21.7893 19.4142 21.4142C19.7893 21.0391 20 20.5304 20 20V8M14 2L20 8M14 2V8H20" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
           </svg>
-        </a>
+        </button>
       </div>
       <div class="hamburger" @click="toggleMenu" :class="{ active: isMenuOpen }">
         <span></span>
@@ -105,6 +106,18 @@ const handleNavClick = (sectionId: string) => {
   closeMenu()
 }
 
+// Resume download function
+const downloadResume = () => {
+  // Create a temporary anchor element
+  const link = document.createElement('a')
+  link.href = '/resume.pdf'
+  link.download = 'Binada_Pasandul_Resume.pdf' // This will be the downloaded file name
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+  closeMenu()
+}
+
 const closeMenu = () => {
   isMenuOpen.value = false
 }
@@ -121,15 +134,16 @@ onUnmounted(() => {
 </script>
 
 <style scoped>
+/* Updated colors for black hero section */
 .navbar {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  background: rgba(15, 12, 41, 0.85);
+  background: rgba(0, 0, 0, 0.9);
   backdrop-filter: blur(15px);
   -webkit-backdrop-filter: blur(15px);
-  border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   z-index: 1000;
   transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   padding: 1.2rem 0;
@@ -137,10 +151,10 @@ onUnmounted(() => {
 }
 
 .navbar.scrolled {
-  background: rgba(15, 12, 41, 0.95);
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  background: rgba(0, 0, 0, 0.95);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.5);
   padding: 0.8rem 0;
-  border-bottom: 1px solid rgba(102, 126, 234, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
 }
 
 .nav-container {
@@ -227,7 +241,7 @@ onUnmounted(() => {
 }
 
 .nav-menu li a {
-  color: #d0d0d0;
+  color: rgba(255, 255, 255, 0.8);
   text-decoration: none;
   font-weight: 500;
   font-size: 0.95rem;
@@ -289,6 +303,9 @@ onUnmounted(() => {
   box-shadow: 0 4px 15px rgba(102, 126, 234, 0.3);
   position: relative;
   overflow: hidden;
+  border: none;
+  cursor: pointer;
+  font-family: inherit;
 }
 
 .resume-btn::before {
@@ -330,7 +347,7 @@ onUnmounted(() => {
 .hamburger span {
   width: 22px;
   height: 2px;
-  background: #d0d0d0;
+  background: rgba(255, 255, 255, 0.8);
   transition: all 0.3s ease;
   border-radius: 2px;
 }
@@ -392,7 +409,7 @@ onUnmounted(() => {
   animation-delay: 4s;
 }
 
-/* Animations */
+/* Animations - All kept the same */
 @keyframes pulse {
   0%, 100% {
     transform: scale(1);
@@ -451,7 +468,7 @@ onUnmounted(() => {
     left: -100%;
     top: 100%;
     flex-direction: column;
-    background: rgba(15, 12, 41, 0.98);
+    background: rgba(0, 0, 0, 0.98);
     backdrop-filter: blur(20px);
     -webkit-backdrop-filter: blur(20px);
     width: 100%;
@@ -459,8 +476,8 @@ onUnmounted(() => {
     transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
     padding: 2rem 0;
     gap: 0;
-    border-top: 1px solid rgba(102, 126, 234, 0.2);
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+    border-top: 1px solid rgba(255, 255, 255, 0.1);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
   }
 
   .nav-menu.active {
@@ -482,7 +499,7 @@ onUnmounted(() => {
   .nav-menu li a {
     display: block;
     padding: 1.2rem 2rem;
-    border-bottom: 1px solid rgba(102, 126, 234, 0.1);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
     flex-direction: row;
     justify-content: center;
   }
@@ -496,7 +513,7 @@ onUnmounted(() => {
   }
 
   .navbar.menu-open {
-    background: rgba(15, 12, 41, 0.98);
+    background: rgba(0, 0, 0, 0.98);
     backdrop-filter: blur(20px);
   }
 }

@@ -8,8 +8,7 @@
       <div class="contact-content">
         <div class="contact-info">
           <p class="contact-description">
-            I'm currently looking for internship opportunities! Whether you have
-            a question or just want to say hi, I'll try my best to get back to you.
+            “Let’s build something meaningful together—feel free to reach out anytime.”
           </p>
           <div class="contact-methods">
             <a href="mailto:your.email@example.com" class="contact-item">
