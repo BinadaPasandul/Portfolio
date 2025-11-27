@@ -85,6 +85,7 @@
 import { ref, reactive } from 'vue'
 
 const isSubmitting = ref(false)
+const submitStatus = ref<'success' | 'error' | null>(null)
 
 const form = reactive({
   name: '',
@@ -95,20 +96,39 @@ const form = reactive({
 
 const handleSubmit = async () => {
   isSubmitting.value = true
-  
-  // Simulate form submission
-  // In a real app, you would send this to a backend or email service
-  await new Promise(resolve => setTimeout(resolve, 1000))
-  
-  alert('Thank you for your message! I\'ll get back to you soon.')
-  
-  // Reset form
-  form.name = ''
-  form.email = ''
-  form.subject = ''
-  form.message = ''
-  
-  isSubmitting.value = false
+  submitStatus.value = null
+
+  try {
+    const response = await fetch('https://formspree.io/f/xgvjkqod', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        name: form.name,
+        email: form.email,
+        subject: form.subject,
+        message: form.message,
+        _replyto: form.email // Important for reply-to functionality
+      })
+    })
+
+    if (response.ok) {
+      submitStatus.value = 'success'
+      // Reset form
+      form.name = ''
+      form.email = ''
+      form.subject = ''
+      form.message = ''
+    } else {
+      throw new Error('Form submission failed')
+    }
+  } catch (error) {
+    submitStatus.value = 'error'
+    console.error('Error submitting form:', error)
+  } finally {
+    isSubmitting.value = false
+  }
 }
 </script>
 
