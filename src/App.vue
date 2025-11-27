@@ -16,7 +16,7 @@ import Contact from './components/Contact.vue'
     <Projects />
     <Contact />
     <footer class="footer">
-      <p>&copy; {{ new Date().getFullYear() }} Portfolio. Built with Vue.js</p>
+      <p>&copy; {{ new Date().getFullYear() }} Binada Pasandul. All rights reserved</p>
     </footer>
   </div>
 </template>

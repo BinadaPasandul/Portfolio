@@ -12,9 +12,15 @@
           class="project-card"
         >
           <div class="project-image">
-            <div class="image-placeholder">
-              <span>Project Image</span>
-            </div>
+  <img
+    v-if="project.image"
+    :src="project.image"
+    alt="Project Image"
+    class="img-fill"
+  />
+  <div v-else class="image-placeholder">
+    <span>Project Image</span>
+  </div>
             <div class="project-overlay">
               <a
                 :href="project.github"
@@ -59,6 +65,13 @@
 </template>
 
 <script setup lang="ts">
+import snazzyPic from '@/assets/snazzy2.jpeg'
+import bidifyPic from '@/assets/bidify.jpeg'
+import pulsePic from '@/assets/pulse1.jpeg'
+import travellaPic from '@/assets/travella1.jpeg'
+import wedinPic from '@/assets/wedin.jpeg'
+import portfolioPic from '@/assets/portfolio1.jpeg'
+
 interface Project {
   id: number
   title: string
@@ -66,6 +79,7 @@ interface Project {
   technologies: string[]
   github: string
   live?: string
+  image?:string
 }
 
 const projects: Project[] = [
@@ -73,45 +87,48 @@ const projects: Project[] = [
     id: 1,
     title: 'Snazzy-The Smart Shoe Store',
     description:
-      'A full-stack e-commerce application with user authentication, product management, and payment integration.',
-    technologies: ['Vue.js', 'Node.js', 'MongoDB', 'Express'],
-    github: 'https://github.com',
-    live: 'https://example.com'
+      'A full-stack e-commerce application with user authentication, Live chat system, stripe payment integration and admin dashboards.MERN stack',
+    technologies: ['React.js', 'Node.js', 'MongoDB', 'Express'],
+    github: 'https://github.com/BinadaPasandul/snazzy/tree/new',
+    image:snazzyPic
+    
   },
   {
     id: 2,
-    title: 'Task Management App',
+    title: 'Bidify-Online Biding system',
     description:
-      'A collaborative task management tool with real-time updates, drag-and-drop functionality, and team collaboration features.',
-    technologies: ['React', 'TypeScript', 'Firebase', 'Tailwind CSS'],
-    github: 'https://github.com',
-    live: 'https://example.com'
+      'A full-stack auction system where sellers can set bids for their items and buyers can buy them and can be delivered.',
+    technologies: ['Java', 'JSP/Servlet', 'SQL', 'tomcat'],
+    github: 'https://github.com/BinadaPasandul/Bidify',
+    image:bidifyPic
   },
   {
     id: 3,
-    title: 'Weather Dashboard',
+    title: 'Pulse',
     description:
-      'A responsive weather application that displays current conditions and forecasts for multiple locations using a weather API.',
-    technologies: ['JavaScript', 'HTML/CSS', 'REST API', 'Chart.js'],
-    github: 'https://github.com',
-    live: 'https://example.com'
+      'A wellness tracking app with daily habit tracking, water intake monitoring and gym routine logging, used shared preferences for data storage',
+    technologies: ['Kotlin', 'Shared preferences','Figma'],
+    github: 'https://github.com/BinadaPasandul/Pulse-Mobile-app',
+   image:pulsePic
   },
   {
     id: 4,
-    title: 'Social Media Analytics',
+    title: 'Travella',
     description:
-      'A dashboard for analyzing social media metrics with data visualization, export functionality, and custom date ranges.',
-    technologies: ['Python', 'Flask', 'PostgreSQL', 'D3.js'],
-    github: 'https://github.com'
+      'A mobile app for storing travel memories with journals, photos and custom entries, used data persisitence',
+    technologies: ['Kotlin','Share preferences', 'Figma'],
+    github: 'https://github.com/BinadaPasandul/Travella',
+    image: travellaPic
   },
   {
     id: 5,
-    title: 'Recipe Finder App',
+    title: 'Wed.In',
     description:
-      'An application to discover and save recipes based on ingredients, dietary restrictions, and cooking preferences.',
-    technologies: ['Vue.js', 'Vuex', 'REST API', 'CSS3'],
+      'A hotel reservation system for weddings using, Implemented user booking, hotel listing and admin management features',
+    technologies: ['html', 'css', 'js', 'php'],
     github: 'https://github.com',
-    live: 'https://example.com'
+    image:wedinPic
+    
   },
   {
     id: 6,
@@ -119,8 +136,9 @@ const projects: Project[] = [
     description:
       'A modern, responsive portfolio website showcasing projects, skills, and contact information with smooth animations.',
     technologies: ['Vue.js', 'TypeScript', 'Vite', 'CSS3'],
-    github: 'https://github.com',
-    live: 'https://example.com'
+    github: 'https://github.com/BinadaPasandul/Portfolio',
+    image:portfolioPic
+    
   }
 ]
 </script>
@@ -265,6 +283,13 @@ const projects: Project[] = [
   font-size: 0.85rem;
   font-weight: 500;
 }
+.img-fill {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
 
 @media (max-width: 768px) {
   .projects-grid {
