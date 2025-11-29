@@ -14,7 +14,7 @@
             I’ve worked with international clients, including delivering a real-time trading project integrating React, C#, SignalR, and WebSockets using Agile and Jira.
           </p>
           <p>
-            I’m skilled in technologies such as Java, JavaScript, Python, C#, React.js, Node.js, SQL, MongoDB, AWS, Azure, and 
+            I’m skilled in technologies such as Java, Python, C#, React.js, Vue.js,  Node.js, SQL, MongoDB, AWS, Azure, and 
             .NET — and I enjoy turning complex requirements into clean, efficient, and well-designed systems. Beyond development, I value continuous
              learning, problem-solving, and writing maintainable code that scales. My goal is to grow as a backend and cloud engineer while creating high-quality digital solutions
              that make a real impact.
