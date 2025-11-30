@@ -8,7 +8,7 @@
       <div class="contact-content">
         <div class="contact-info">
           <p class="contact-description">
-            “Let’s build something meaningful together—feel free to reach out anytime.”
+            “Let’s build something meaningful together and feel free to reach out anytime.”
           </p>
           <div class="contact-methods">
             <a href="mailto:your.email@example.com" class="contact-item">
