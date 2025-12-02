@@ -19,7 +19,10 @@ import Contact from './components/Contact.vue'
       <div class="footer-content">
         <div class="footer-section">
           <h3>Binada Pasandul</h3>
-          <p>Full Stack Developer & Designer</p>
+          <p>Full Stack Developer | Data Analyst</p>
+            <p>Machine Learning enthusiast</p> 
+            
+          
         </div>
         
         <div class="footer-section">
