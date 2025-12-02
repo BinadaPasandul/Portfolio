@@ -115,7 +115,7 @@ const handleSubmit = async () => {
 
     if (response.ok) {
       submitStatus.value = 'success'
-      // Reset form
+      
       form.name = ''
       form.email = ''
       form.subject = ''
