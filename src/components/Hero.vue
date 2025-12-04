@@ -33,7 +33,7 @@
         <div class="description-container">
           <p class="description">
             full-stack developer with a strong focus 
-          on backend engineering and building scalable, high-performance systems. 
+          on backend engineering and building scalable, high-performance systems productively. 
           With experience completing 6+ full-stack projects and working with international clients, I specialize in 
           crafting modern web applications, cloud-powered solutions, and clean user experiences using modern technologies
           </p>
