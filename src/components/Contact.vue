@@ -63,7 +63,7 @@
             />
           </div>
           <div class="form-group">
-            <label for="message">Message </label>
+            <label for="message">Message</label>
             <textarea
               id="message"
               v-model="form.message"
